@@ -2,16 +2,16 @@
 <html lang="uz">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta name="description"
-        content="Doston Davlatovning loyihalari. Web dasturchi sifatida yaratilgan loyihalar to‘plami.">
-    <meta name="keywords" content="Doston Davlatov, web loyihalar, JavaScript, Python, PHP, UX/UI">
+        content="Doston Davlatovning loyihalari. Web dasturchi sifatida yaratilgan loyihalar to‘plami." />
+    <meta name="keywords" content="Doston Davlatov, web loyihalar, JavaScript, Python, PHP, UX/UI" />
     <title>Doston Davlatov - Loyihalar</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="src/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+    <link rel="stylesheet" href="src/style.css" />
 </head>
 
 <body class="bg-light">
@@ -36,7 +36,7 @@
         <div class="container">
             <h2 class="display-5 fw-bold text-center mb-5">Mening Loyihalarim</h2>
             <div class="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4" id="project-container">
-                <!-- Project cards will be dynamically inserted here -->
+                <!-- Project cards dynamically inserted here -->
             </div>
         </div>
     </section>
@@ -58,27 +58,27 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script src="projects.js"></script>
     <script>
-        // Set the current year in the footer
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        // Function to dynamically generate project cards
         function renderProjects() {
             const container = document.getElementById('project-container');
+            container.innerHTML = '';
+
             projects.forEach(project => {
                 const card = `
                     <div class="col">
-                        <div class="card h-100">
+                        <div class="card h-100 shadow-sm">
                             <img src="${project.image}" class="card-img-top" alt="${project.alt}" loading="lazy">
-                            <div class="card-body">
+                            <div class="card-body d-flex flex-column">
                                 <h4 class="card-title">${project.title}</h4>
-                                <a class="btn btn-outline-primary mb-2" data-bs-toggle="collapse" href="#projectText${project.id}"
-                                    role="button" aria-expanded="false" aria-controls="projectText${project.id}">
+                                <a class="btn btn-outline-primary mb-2" data-bs-toggle="collapse" href="${project.link}"
+                                    role="button" aria-expanded="false">
                                     Batafsil ko‘rish
                                 </a>
                                 <div class="collapse" id="projectText${project.id}">
                                     <p class="card-text mt-2">${project.description}</p>
-                                    <p class="tech-stack">Texnologiyalar: ${project.technologies.join(', ')}</p>
-                                    <a class="btn btn-outline-primary mb-2" href="${project.link}" role="button">
+                                    <p class="tech-stack fw-semibold">Texnologiyalar: ${project.technologies.join(', ')}</p>
+                                    <a class="btn btn-outline-success mt-auto" href="${project.link}" target="_blank" rel="noopener noreferrer">
                                         Saytga o‘tish
                                     </a>
                                 </div>
@@ -90,7 +90,7 @@
             });
         }
 
-        // Call the function to render projects when the page loads
+        // Run render when DOM is ready
         document.addEventListener('DOMContentLoaded', renderProjects);
     </script>
 </body>
