@@ -60,37 +60,6 @@
     <script>
         document.getElementById('year').textContent = new Date().getFullYear();
 
-        function renderProjects() {
-            const container = document.getElementById('project-container');
-            container.innerHTML = '';
-
-            projects.forEach(project => {
-                const card = `
-                    <div class="col">
-                        <div class="card h-100 shadow-sm">
-                            <img src="${project.image}" class="card-img-top" alt="${project.alt}" loading="lazy">
-                            <div class="card-body d-flex flex-column">
-                                <h4 class="card-title">${project.title}</h4>
-                                <a class="btn btn-outline-primary mb-2" data-bs-toggle="collapse" href="${project.link}"
-                                    role="button" aria-expanded="false">
-                                    Batafsil ko‘rish
-                                </a>
-                                <div class="collapse" id="projectText${project.id}">
-                                    <p class="card-text mt-2">${project.description}</p>
-                                    <p class="tech-stack fw-semibold">Texnologiyalar: ${project.technologies.join(', ')}</p>
-                                    <a class="btn btn-outline-success mt-auto" href="${project.link}" target="_blank" rel="noopener noreferrer">
-                                        Saytga o‘tish
-                                    </a>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                `;
-                container.insertAdjacentHTML('beforeend', card);
-            });
-        }
-
-        // Run render when DOM is ready
         document.addEventListener('DOMContentLoaded', renderProjects);
     </script>
 </body>
