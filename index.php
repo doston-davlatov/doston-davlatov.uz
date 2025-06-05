@@ -15,7 +15,7 @@
     <?php include 'includes/header.php'; ?>
 
     <section class="hero text-center py-5 bg-light">
-        <img src="assets/img/ddr_anime.jpg" alt="Doston Davlatov" class="rounded-circle mb-3" width="150">
+        <img src="assets/img/ddr_anime.jpg" alt="Doston Davlatov" class="rounded-circle mb-3" style="width: 300px; height: 300px;" >
         <h1>Salom, men Doston Davlatovman</h1>
         <p class="lead">Full-stack Dasturchi | Web Developer | AI Enthusiast</p>
         <div class="text">

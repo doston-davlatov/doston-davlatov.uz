@@ -1,0 +1,50 @@
+[
+  {
+    "title": "Do You Love Me?",
+    "description": "GIF, yurak animatsiyasi va foydalanuvchi bilan interaktiv aloqaga ega romantik sayt. Video yozish funksiyasi mavjud.",
+    "technologies": "HTML, CSS, JavaScript, WebRTC",
+    "image": "assets/img/project_love.jpg",
+    "github": "https://github.com/doston/do-you-love-me",
+    "demo": "https://demo.doston.uz/love"
+  },
+  {
+    "title": "Tic Tac Toe AI",
+    "description": "AIga qarshi o‘ynash imkoniyatiga ega bo‘lgan, kuch darajalari bilan Tic Tac Toe o‘yini. Yorqin dizayn va soya effektlari bilan.",
+    "technologies": "HTML, CSS, JavaScript",
+    "image": "assets/img/project_tictactoe.jpg",
+    "github": "https://github.com/doston/doston-x-vs-o",
+    "demo": "https://demo.doston.uz/tictactoe"
+  },
+  {
+    "title": "Anon1M Music Page",
+    "description": "Anon1M musiqachisi uchun PHP asosida tayyorlangan, trek yuklash va tinglash imkoniyati mavjud bo‘lgan sahifa.",
+    "technologies": "HTML, CSS, PHP",
+    "image": "assets/img/project_anon1m.jpg",
+    "github": "https://github.com/doston/anon1m-music",
+    "demo": "https://demo.doston.uz/anon1m"
+  },
+  {
+    "title": "Ninja Game",
+    "description": "Foydalanuvchi chiziq orqali ninja qahramonni ustunlar orasidan o‘tkazadi. Reyting tizimi, ro‘yxatdan o‘tish va TOP 10 ballar mavjud.",
+    "technologies": "HTML, CSS, JavaScript, PHP, Bootstrap",
+    "image": "assets/img/project_ninja.jpg",
+    "github": "https://github.com/doston/ninja-game",
+    "demo": "https://demo.doston.uz/ninja"
+  },
+  {
+    "title": "Portfolio Sayt",
+    "description": "Shaxsiy portfolio sayt. Loyihalar .json orqali dinamik qo‘shiladi va admin panel orqali boshqariladi.",
+    "technologies": "PHP, Bootstrap 5, JavaScript, MySQL",
+    "image": "assets/img/portfolio.jpg",
+    "github": "https://github.com/doston/portfolio",
+    "demo": "https://doston-davlatov.uz"
+  },
+  {
+    "title": "AI Chatbot",
+    "description": "OpenAI API asosida ishlovchi sun’iy intellekt chatbot. Telegram boti shaklida integratsiya qilingan.",
+    "technologies": "Python, Flask, Telegram Bot API, OpenAI API",
+    "image": "assets/img/chatbot.jpg",
+    "github": "https://github.com/doston/ai-chatbot",
+    "demo": "#"
+  }
+]
