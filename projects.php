@@ -7,6 +7,7 @@ $projects = $db->select('projects');
 
 <!DOCTYPE html>
 <html lang="uz">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -133,18 +134,21 @@ $projects = $db->select('projects');
             .projects h2 {
                 font-size: 2rem;
             }
+
             .card-img-top {
                 height: 150px;
             }
+
             .card-title {
                 font-size: 1.1rem;
             }
         }
     </style>
 </head>
+
 <body>
     <?php include 'includes/header.php'; ?>
-    
+
     <section class="projects py-5">
         <div class="container">
             <h2 class="text-center mb-4">Portfolio</h2>
@@ -153,15 +157,18 @@ $projects = $db->select('projects');
                     <?php foreach ($projects as $project): ?>
                         <div class="col-md-4 mb-4">
                             <div class="card h-100">
-                                <img src="<?= htmlspecialchars($project['image']) ?>" class="card-img-top" alt="<?= htmlspecialchars($project['title']) ?>">
+                                <img src="https://admin.doston-davlatov.uz/src/images/<?= htmlspecialchars($project['image']) ?>"
+                                    class="card-img-top" alt="<?= htmlspecialchars($project['title']) ?>">
                                 <div class="card-body d-flex flex-column">
                                     <h5 class="card-title"><?= htmlspecialchars($project['title']) ?></h5>
                                     <p class="card-text"><?= htmlspecialchars($project['description']) ?></p>
                                     <p><strong>Texnologiyalar:</strong> <?= htmlspecialchars($project['technologies']) ?></p>
                                     <div class="mt-auto">
-                                        <a href="<?= htmlspecialchars($project['github']) ?>" class="btn btn-primary" target="_blank">Link</a>
+                                        <a href="<?= htmlspecialchars($project['github']) ?>" class="btn btn-primary"
+                                            target="_blank">Link</a>
                                         <?php if (!empty($project['demo']) && $project['demo'] !== "#"): ?>
-                                            <a href="<?= htmlspecialchars($project['demo']) ?>" class="btn btn-outline-primary" target="_blank">Demo</a>
+                                            <a href="<?= htmlspecialchars($project['demo']) ?>" class="btn btn-outline-primary"
+                                                target="_blank">Demo</a>
                                         <?php endif; ?>
                                     </div>
                                 </div>
@@ -181,4 +188,5 @@ $projects = $db->select('projects');
     <script src="assets/js/main.js"></script>
     <script src="assets/js/footer.js"></script>
 </body>
+
 </html>
